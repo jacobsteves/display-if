@@ -1,30 +1,35 @@
 (function($) {
-  $('.display-if-selected-option').each(function() {
-      var $targetEl = $(this);
-      var $questionEl = $($targetEl.data('if_selected_option'));
-      var displayIfValueIs = $targetEl.data('selected_value');
-      var displayIfNotValue = $targetEl.data('selected_value_not');
+  $('.display-if').each(function() {
+      var $this = $(this);
+      var $targets = $($this.data('target_identifier'));
+      var targetType = $this.data('target_type');
+      var displayIfValueIs = $this.data('target_value');
+      var displayIfNotValue = $this.data('target_value_not');
+
+      function selectValidator(el) {
+        var $target = $(el);
+
+        if (displayIfNotValue) {
+            return $target.val() !== displayIfNotValue;
+        } else {
+            return $target.val() === displayIfValueIs;
+        }
+      }
 
       function showOrHide() {
-          var numChecks = $questionEl.map(function() {
-              var $thisQuestionEl = $(this);
-
-              if (displayIfNotValue) {
-                  return $thisQuestionEl.val() !== displayIfNotValue;
-              } else {
-                  return $thisQuestionEl.val() === displayIfValueIs;
-              }
+          var numChecks = $targets.map(function() {
+              if (targetType === "select") selectValidator(this);
           }).toArray().reduce(function(a, b) { return a + b; }, 0);
 
-          if ($questionEl.length > 0 && numChecks == $questionEl.length) {
-              $targetEl.show();
+          if ($targets.length > 0 && numChecks == $targets.length) {
+              $this.show();
           } else {
-              $targetEl.hide();
+              $this.hide();
           }
 
       }
 
-      $questionEl.on('change', function() {
+      $targets.on('change', function() {
           showOrHide();
       });
 
