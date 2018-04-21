@@ -109,6 +109,45 @@
             </div>
           </div>
 
+          <!-- ************************ RADIO TAG ************************ -->
+
+          <div class="row">
+            <div class="col-md-8 form-check">
+              <label>Radio Tag</label>
+              <input type="radio" name="displayIfRadio" value="dogs"> Dogs
+              <input type="radio" name="displayIfRadio" value="cats"> Cats
+              <input type="radio" name="displayIfRadio" value="other"> Other
+              <div
+                class="form-text text-muted display-if"
+                data-target_identifier="input[name=displayIfRadio]"
+                data-target_type="radio"
+                data-target_value="dogs">
+                <small>I agree, dogs are better.</small>
+              </div>
+              <div
+                class="form-text text-muted display-if"
+                data-target_identifier="input[name=displayIfRadio]"
+                data-target_type="radio"
+                data-target_value="cats">
+                <small>Good choice, I do like cats!</small>
+              </div>
+              <div
+                class="form-text text-muted display-if"
+                data-target_identifier="input[name=displayIfRadio]"
+                data-target_type="radio"
+                data-target_value="other">
+                <small>Oh, okay.</small>
+              </div>
+              <div
+                class="form-text text-muted display-if"
+                data-target_identifier="input[name=displayIfRadio]"
+                data-target_type="radio"
+                data-target_has_any_value=true>
+                <small>But, thanks for picking :).</small>
+              </div>
+            </div>
+          </div>
+
         </form>
         <!-- /.row -->
 

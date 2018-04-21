@@ -29,10 +29,30 @@
         }
       }
 
+      function radioValidator(el) {
+        var $target = $(el);
+
+        if (displayIfAnyValue) {
+            return $target.is(':checked');
+        } else if (displayIfValueIs) {
+            return $target.is(':checked') && $target.val() === displayIfValueIs;
+        } else {
+            return $target.is(':checked') && $target.val() !== displayIfValueIs;
+        }
+      }
+
+      function updateRadioTargets() {
+        $targets = $($this.data('target_identifier'));
+        $targets = $targets.filter(':checked');
+      }
+
       function showOrHide() {
+          if (targetType == "radio") updateRadioTargets();
+
           var numChecks = $targets.map(function() {
               if (targetType === "select") return selectValidator(this);
               else if (targetType === "checkbox") return checkboxValidator(this);
+              else if (targetType == "radio") return radioValidator(this);
           }).toArray().reduce(function(a, b) { return a + b; }, 0);
 
           if ($targets.length > 0 && numChecks == $targets.length) {
