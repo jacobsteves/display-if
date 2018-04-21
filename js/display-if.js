@@ -3,13 +3,16 @@
       var $this = $(this);
       var $targets = $($this.data('target_identifier'));
       var targetType = $this.data('target_type');
+      var displayIfAnyValue = $this.data('target_has_any_value');
       var displayIfValueIs = $this.data('target_value');
       var displayIfNotValue = $this.data('target_value_not');
 
       function selectValidator(el) {
         var $target = $(el);
 
-        if (displayIfNotValue) {
+        if (displayIfAnyValue) {
+            return !!$target.val();
+        } else if (displayIfNotValue) {
             return $target.val() !== displayIfNotValue;
         } else {
             return $target.val() === displayIfValueIs;
