@@ -1,9 +1,10 @@
 (function($) {
   $('.display-if').each(function() {
       var $this = $(this);
-      var inverse = $this.data('display_if_inverse');
       var $targets = $($this.data('target_identifier'));
       var $matches = $($this.data('target_matches_identifier'));
+
+      var inverse = $this.data('display_if_inverse');
       var targetType = $this.data('target_type');
       var displayIfAnyValue = $this.data('target_has_any_value');
       var displayIfValueIs = $this.data('target_value');
