@@ -29,8 +29,47 @@
     <!-- Page Content -->
     <div class="container">
         <h2>Display If</h2>
-        <div class="row">
-        </div>
+        <form>
+          <div class="row">
+            <div class="col-md-8 form-group">
+              <label for="displayIfSelect">Select Tag</label>
+              <select id="displayIfSelect" class="form-control">
+                <option value="Austrailian Shepherd">Austrailian Shepherd</option>
+                <option value="Golden Retriever">Golden Retriever</option>
+              </select>
+              <div
+                class="form-text text-muted display-if"
+                data-target_identifier="#displayIfSelect"
+                data-target_type="select"
+                data-target_value="Austrailian Shepherd">
+                <small>The selected option is Austrailian Shepherd.</small>
+              </div>
+              <div
+                class="form-text text-muted display-if"
+                data-target_identifier="#displayIfSelect"
+                data-target_type="select"
+                data-target_value="Golden Retriever">
+                <small>The selected option is Golden Retriever.</small>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div
+                class="form-text text-muted display-if"
+                data-target_identifier="#displayIfSelect"
+                data-target_type="select"
+                data-target_value="Austrailian Shepherd">
+                <img src="images/austrailian_shepherd.jpg" style="max-width: 100%; max-height: 100px" />
+              </div>
+              <div
+                class="form-text text-muted display-if"
+                data-target_identifier="#displayIfSelect"
+                data-target_type="select"
+                data-target_value="Golden Retriever">
+                <img src="images/golden.jpg" style="max-width: 100%; max-height: 100px" />
+              </div>
+            </div>
+          </div>
+        </form>
         <!-- /.row -->
 
     </div>

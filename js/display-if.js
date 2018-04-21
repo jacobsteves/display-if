@@ -18,7 +18,7 @@
 
       function showOrHide() {
           var numChecks = $targets.map(function() {
-              if (targetType === "select") selectValidator(this);
+              if (targetType === "select") return selectValidator(this);
           }).toArray().reduce(function(a, b) { return a + b; }, 0);
 
           if ($targets.length > 0 && numChecks == $targets.length) {
