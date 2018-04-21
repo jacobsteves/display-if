@@ -1,6 +1,7 @@
 (function($) {
   $('.display-if').each(function() {
       var $this = $(this);
+      var inverse = $this.data('display_if_inverse');
       var $targets = $($this.data('target_identifier'));
       var $matches = $($this.data('target_matches_identifier'));
       var targetType = $this.data('target_type');
@@ -11,10 +12,15 @@
 
       var basicFields = ['select', 'text', 'password'];
 
+      /**
+        * Determine if the the matching identifiers all have the same value as
+        * @param value
+        */
       function matches(value) {
           var numMatches = $matches.map(function() {
-            if (!matchValueCanBeNull && !$(this).val()) return false;
-            return value === $(this).val();
+            var matchValue = $(this).val();
+            if (!matchValueCanBeNull && !matchValue) return false;
+            return value === matchValue;
           }).toArray().reduce(function(a, b) { return a + b; }, 0);
 
           return $matches.length > 0 && numMatches == $matches.length;
@@ -44,24 +50,45 @@
         return $target.is(':checked') && $target.val() !== displayIfValueIs;
       }
 
+      /**
+        * The default validation only checks if the target has a value
+        */
       function defaultValidator(el) {
         var $target = $(el);
         return !!$target.val();
       }
 
+      /**
+        * Radio inputs require multiple inputs of the same identifier. So we
+        * must update the targets to only the checked value.
+        */
       function updateRadioTargets() {
         $targets = $($this.data('target_identifier'));
         $targets = $targets.filter(':checked');
       }
 
+      /**
+        * Check if the element passes the validation requirements to show.
+        */
+      function validate(el) {
+        if (targetType === "checkbox") return checkboxValidator(el);
+        else if (targetType === "radio") return radioValidator(el);
+        else if (basicFields.indexOf(targetType) > -1) return basicValidator(el);
+        return defaultValidator(el);
+      }
+
+      /**
+        * Check all targets and determine if the object passes the display_if
+        * requirement. If there are multiple targets (meaning there are multiple)
+        * elements with the same target identifier) then the object must passes
+        * the display requirement on each target.
+        */
       function showOrHide() {
           if (targetType == "radio") updateRadioTargets();
 
           var numChecks = $targets.map(function() {
-              if (targetType === "checkbox") return checkboxValidator(this);
-              else if (targetType === "radio") return radioValidator(this);
-              else if (basicFields.indexOf(targetType) > -1) return basicValidator(this);
-              else return defaultValidator(this);
+              var validated = validate(this);
+              return (inverse) ? !validated : validated;
           }).toArray().reduce(function(a, b) { return a + b; }, 0);
 
           if ($targets.length > 0 && numChecks == $targets.length) {
