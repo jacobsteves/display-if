@@ -1,4 +1,4 @@
-# Display-If-jQuery
+# Display If
 A super light & simple jQuery module that displays or hides specified elements based on data.
 
 ## Requirements
@@ -35,7 +35,7 @@ For example, if your option is named `option` add a `data-option='...'` tag to y
 | ------------------ | ----------- |
 | target_name               | The name of the form field that the display element depends on. |
 | target_matches_identifier | The name of another form field. If this option is given, then the system will check if `[name=data_target_name]` has the same value as `[name=data_target_matches_identifier]` |
-| target_type        | <b>Default:</b> 'default'. <br><br><b>Options:</b> 'text', 'select', 'password', 'radio', 'checkbox', 'default' <br><br>The type of input. |
+| target_type        | <b>Default:</b> 'default'. <br><b>Options:</b> 'text', 'select', 'password', 'radio', 'checkbox', 'default' <br><br>The type of input. |
 | display_if_inverse | <b>Default:</b> false. <br><br>If true, the display requirements will show the element if the negation of the display_if is satisfied |
 | target_value       | The value that satisfies the display requirement. If the form field value is equal to the target_value, then the display requirement is satisfied. |
 | target_value_not   | The value that breaks the display requirement. If the form field value is equal to the target_value, then the display requirement is not satisfied. This is an alias for setting the `target_value` and `displsy_if_inverse=true` |
