@@ -7,6 +7,8 @@
       var displayIfValueIs = $this.data('target_value');
       var displayIfNotValue = $this.data('target_value_not');
 
+      var basicFields = ['file', 'image'];
+
       function selectValidator(el) {
         var $target = $(el);
 
@@ -41,6 +43,11 @@
         }
       }
 
+      function basicValidator(el) {
+        var $target = $(el);
+        return !!$target.val();
+      }
+
       function updateRadioTargets() {
         $targets = $($this.data('target_identifier'));
         $targets = $targets.filter(':checked');
@@ -52,7 +59,8 @@
           var numChecks = $targets.map(function() {
               if (targetType === "select") return selectValidator(this);
               else if (targetType === "checkbox") return checkboxValidator(this);
-              else if (targetType == "radio") return radioValidator(this);
+              else if (targetType === "radio") return radioValidator(this);
+              else return basicValidator(this);
           }).toArray().reduce(function(a, b) { return a + b; }, 0);
 
           if ($targets.length > 0 && numChecks == $targets.length) {

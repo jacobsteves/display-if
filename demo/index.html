@@ -114,9 +114,9 @@
           <div class="row">
             <div class="col-md-8 form-check">
               <label>Radio Tag</label>
-              <input type="radio" name="displayIfRadio" value="dogs"> Dogs
-              <input type="radio" name="displayIfRadio" value="cats"> Cats
-              <input type="radio" name="displayIfRadio" value="other"> Other
+              <input type="radio" name="displayIfRadio" value="dogs" /> Dogs
+              <input type="radio" name="displayIfRadio" value="cats" /> Cats
+              <input type="radio" name="displayIfRadio" value="other" /> Other
               <div
                 class="form-text text-muted display-if"
                 data-target_identifier="input[name=displayIfRadio]"
@@ -144,6 +144,21 @@
                 data-target_type="radio"
                 data-target_has_any_value=true>
                 <small>But, thanks for picking :).</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- ************************ FILE TAG ************************ -->
+
+          <div class="row">
+            <div class="col-md-8 form-check">
+              <label>File Tag</label>
+              <input type="file" id="displayIfFile" class="form-control"/>
+              <div
+                class="form-text text-muted display-if"
+                data-target_identifier="#displayIfFile"
+                data-target_type="file">
+                <small>You have picked a file!</small>
               </div>
             </div>
           </div>
