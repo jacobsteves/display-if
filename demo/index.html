@@ -11,6 +11,8 @@
 
     <title>Display If Bare Demo</title>
 
+    <link href="css/main.css" rel="stylesheet">
+
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -30,135 +32,149 @@
     <div class="container">
         <h2>Display If</h2>
         <form>
+          <div class="container display-if-section">
+            <h4>Selects</h4>
 
-          <!-- ************************ SELECT TAG ************************ -->
+            <!-- ************************ SELECT TAG ************************ -->
 
-          <div class="row">
-            <div class="col-md-8 form-group">
-              <label for="displayIfSelect">Select tag has specific value</label>
-              <select id="displayIfSelect" class="form-control">
-                <option value="Austrailian Shepherd">Austrailian Shepherd</option>
-                <option value="Golden Retriever">Golden Retriever</option>
-              </select>
-              <div
-                class="form-text text-muted display-if"
-                data-target_identifier="#displayIfSelect"
-                data-target_type="select"
-                data-target_value="Austrailian Shepherd">
-                <small>The selected option is Austrailian Shepherd.</small>
+            <div class="row">
+              <div class="col-md-8 form-group">
+                <label for="displayIfSelect">Select tag has specific value</label>
+                <select id="displayIfSelect" class="form-control">
+                  <option value="Austrailian Shepherd">Austrailian Shepherd</option>
+                  <option value="Golden Retriever">Golden Retriever</option>
+                </select>
+                <div
+                  class="form-text text-muted display-if"
+                  data-target_identifier="#displayIfSelect"
+                  data-target_type="select"
+                  data-target_value="Austrailian Shepherd">
+                  <small>The selected option is Austrailian Shepherd.</small>
+                </div>
+                <div
+                  class="form-text text-muted display-if"
+                  data-target_identifier="#displayIfSelect"
+                  data-target_type="select"
+                  data-target_value="Golden Retriever">
+                  <small>The selected option is Golden Retriever.</small>
+                </div>
               </div>
-              <div
-                class="form-text text-muted display-if"
-                data-target_identifier="#displayIfSelect"
-                data-target_type="select"
-                data-target_value="Golden Retriever">
-                <small>The selected option is Golden Retriever.</small>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div
-                class="form-text text-muted display-if"
-                data-target_identifier="#displayIfSelect"
-                data-target_type="select"
-                data-target_value="Austrailian Shepherd">
-                <img src="images/austrailian_shepherd.jpg" style="max-width: 100%; max-height: 100px" />
-              </div>
-              <div
-                class="form-text text-muted display-if"
-                data-target_identifier="#displayIfSelect"
-                data-target_type="select"
-                data-target_value="Golden Retriever">
-                <img src="images/golden.jpg" style="max-width: 100%; max-height: 100px" />
-              </div>
-            </div>
-          </div>
-
-          <!-- ******************* SELECT TAG ANY VALUE ******************* -->
-
-          <div class="row">
-            <div class="col-md-8 form-group">
-              <label for="displayIfSelectAny">Select has any value</label>
-              <select id="displayIfSelectAny" class="form-control">
-                <option disabled selected value>Select An Option</option>
-                <option value="Austrailian Shepherd">Austrailian Shepherd</option>
-                <option value="Golden Retriever">Golden Retriever</option>
-              </select>
-              <div
-                class="form-text text-muted display-if"
-                data-target_identifier="#displayIfSelectAny"
-                data-target_type="select"
-                data-target_has_any_value=true>
-                <small>An option has been selected.</small>
+              <div class="col-md-4">
+                <div
+                  class="form-text text-muted display-if"
+                  data-target_identifier="#displayIfSelect"
+                  data-target_type="select"
+                  data-target_value="Austrailian Shepherd">
+                  <img src="images/austrailian_shepherd.jpg" style="max-width: 100%; max-height: 100px" />
+                </div>
+                <div
+                  class="form-text text-muted display-if"
+                  data-target_identifier="#displayIfSelect"
+                  data-target_type="select"
+                  data-target_value="Golden Retriever">
+                  <img src="images/golden.jpg" style="max-width: 100%; max-height: 100px" />
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- *********************** CHECKBOX TAG *********************** -->
+            <!-- ******************* SELECT TAG ANY VALUE ******************* -->
 
-          <div class="row">
-            <div class="col-md-8 form-check">
-              <label for="displayIfCheckbox">Checkbox Tag</label>
-              <input type="checkbox" id="displayIfCheckbox" class="form-check-input" />
-              <div
-                class="form-text text-muted display-if"
-                data-target_identifier="#displayIfCheckbox"
-                data-target_type="checkbox"
-                data-target_value=true>
-                <small>The checkbox has been selected.</small>
+            <div class="row">
+              <div class="col-md-8 form-group">
+                <label for="displayIfSelectAny">Select has any value</label>
+                <select id="displayIfSelectAny" class="form-control">
+                  <option disabled selected value>Select An Option</option>
+                  <option value="Austrailian Shepherd">Austrailian Shepherd</option>
+                  <option value="Golden Retriever">Golden Retriever</option>
+                </select>
+                <div
+                  class="form-text text-muted display-if"
+                  data-target_identifier="#displayIfSelectAny"
+                  data-target_type="select"
+                  data-target_has_any_value=true>
+                  <small>An option has been selected.</small>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- ************************ RADIO TAG ************************ -->
+          <div class="container display-if-section">
+            <h4>Checkbox</h4>
+            <!-- *********************** CHECKBOX TAG *********************** -->
 
-          <div class="row">
-            <div class="col-md-8 form-check">
-              <label>Radio Tag</label>
-              <input type="radio" name="displayIfRadio" value="dogs" /> Dogs
-              <input type="radio" name="displayIfRadio" value="cats" /> Cats
-              <input type="radio" name="displayIfRadio" value="other" /> Other
-              <div
-                class="form-text text-muted display-if"
-                data-target_identifier="input[name=displayIfRadio]"
-                data-target_type="radio"
-                data-target_value="dogs">
-                <small>I agree, dogs are better.</small>
-              </div>
-              <div
-                class="form-text text-muted display-if"
-                data-target_identifier="input[name=displayIfRadio]"
-                data-target_type="radio"
-                data-target_value="cats">
-                <small>Good choice, I do like cats!</small>
-              </div>
-              <div
-                class="form-text text-muted display-if"
-                data-target_identifier="input[name=displayIfRadio]"
-                data-target_type="radio"
-                data-target_value="other">
-                <small>Oh, okay.</small>
-              </div>
-              <div
-                class="form-text text-muted display-if"
-                data-target_identifier="input[name=displayIfRadio]"
-                data-target_type="radio"
-                data-target_has_any_value=true>
-                <small>But, thanks for picking :).</small>
+            <div class="row">
+              <div class="col-md-8 form-check">
+                <label for="displayIfCheckbox">Do you like checkboxes?</label>
+                <input type="checkbox" id="displayIfCheckbox" class="form-check-input" />
+                <div
+                  class="form-text text-muted display-if"
+                  data-target_identifier="#displayIfCheckbox"
+                  data-target_type="checkbox"
+                  data-target_value=true>
+                  <small>Great, I do too!</small>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- ************************ FILE TAG ************************ -->
+          <div class="container display-if-section">
+            <h4>Radio Tags</h4>
+            <!-- ************************ RADIO TAG ************************ -->
 
-          <div class="row">
-            <div class="col-md-8 form-check">
-              <label>File Tag</label>
-              <input type="file" id="displayIfFile" class="form-control"/>
-              <div
-                class="form-text text-muted display-if"
-                data-target_identifier="#displayIfFile"
-                data-target_type="file">
-                <small>You have picked a file!</small>
+            <div class="row">
+              <div class="col-md-8 form-check">
+                <label>What is your favourite animal?</label>
+                <input type="radio" name="displayIfRadio" value="dogs" /> Dogs
+                <input type="radio" name="displayIfRadio" value="cats" /> Cats
+                <input type="radio" name="displayIfRadio" value="other" /> Other
+                <div
+                  class="form-text text-muted display-if"
+                  data-target_identifier="input[name=displayIfRadio]"
+                  data-target_type="radio"
+                  data-target_value="dogs">
+                  <small>I agree, dogs are the best.</small>
+                </div>
+                <div
+                  class="form-text text-muted display-if"
+                  data-target_identifier="input[name=displayIfRadio]"
+                  data-target_type="radio"
+                  data-target_value="cats">
+                  <small>Good choice, I do like cats!</small>
+                </div>
+                <div
+                  class="form-text text-muted display-if"
+                  data-target_identifier="input[name=displayIfRadio]"
+                  data-target_type="radio"
+                  data-target_value="other">
+                  <small>Oh, okay.</small>
+                </div>
+                <div
+                  class="form-text text-muted display-if"
+                  data-target_identifier="input[name=displayIfRadio]"
+                  data-target_type="radio"
+                  data-target_has_any_value=true>
+                  <small>But, thanks for picking :).</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container display-if-section">
+            <h4>Basic Tags</h4>
+            <p>These tags only have the option to display if the input has a value.</p>
+            <p>If no <code>target_type</code> is specified, display-if defaults to Basic.</p>
+            <!-- ************************ FILE TAG ************************ -->
+
+            <div class="row">
+              <div class="col-md-8 form-check">
+                <label>File Tag</label>
+                <input type="file" id="displayIfFile" class="form-control"/>
+                <div
+                  class="form-text text-muted display-if"
+                  data-target_identifier="#displayIfFile"
+                  data-target_type="file">
+                  <small>You have picked a file!</small>
+                </div>
               </div>
             </div>
           </div>
