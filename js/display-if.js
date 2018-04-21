@@ -1,11 +1,12 @@
 (function($) {
   $('.display-if').each(function() {
       var $this = $(this);
-      var $targets = $($this.data('target_identifier'));
-      var $matches = $($this.data('target_matches_identifier'));
+      var $targets = $("[name=" + $this.data('target_name') + "]");
+      var $matches = $("[name=" + $this.data('target_matches_identifier') + "]");
 
       var inverse = $this.data('display_if_inverse');
       var targetType = $this.data('target_type');
+
       var displayIfAnyValue = $this.data('target_has_any_value');
       var displayIfValueIs = $this.data('target_value');
       var displayIfNotValue = $this.data('target_value_not');
@@ -64,7 +65,7 @@
         * must update the targets to only the checked value.
         */
       function updateRadioTargets() {
-        $targets = $($this.data('target_identifier'));
+        $targets = $("[name=" + $this.data('target_name') + "]");
         $targets = $targets.filter(':checked');
       }
 

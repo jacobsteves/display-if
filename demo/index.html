@@ -49,10 +49,10 @@
                 <div class="row display-if-row">
                   <div class="col-md-8 form-check">
                     <label>Text Tag for any value</label>
-                    <input type="text" id="displayIfText" placeholder="Type anything"class="form-control"/>
+                    <input type="text" name="displayIfText" placeholder="Type anything"class="form-control"/>
                     <div
                       class="form-text text-muted display-if"
-                      data-target_identifier="#displayIfText"
+                      data-target_name="displayIfText"
                       data-target_type="text"
                       data-target_has_any_value=true>
                       <small>Thanks for your input :)</small>
@@ -63,17 +63,17 @@
                 <div class="row display-if-row">
                   <div class="col-md-8 form-check">
                     <label>Text Tag for a specific value</label>
-                    <input type="text" id="displayIfText2" placeholder="Type the word: debug"class="form-control"/>
+                    <input type="text" name="displayIfText2" placeholder="Type the word: debug"class="form-control"/>
                     <div
                       class="form-text text-muted display-if"
-                      data-target_identifier="#displayIfText2"
+                      data-target_name="displayIfText2"
                       data-target_type="text"
                       data-target_value="debug">
                       <small>Debug mode: active! (not really)</small>
                     </div>
                     <div
                       class="form-text text-muted display-if"
-                      data-target_identifier="#displayIfText2"
+                      data-target_name="displayIfText2"
                       data-target_type="text"
                       data-target_has_any_value=true>
                       <small>Thanks for your input :)</small>
@@ -84,12 +84,12 @@
                 <div class="row display-if-row">
                   <div class="col-md-8 form-check">
                     <label>Text Fields Match?</label>
-                    <input type="password" id="displayIfTextsMatch" placeholder="Enter password" class="form-control"/>
-                    <input type="password" id="displayIfTextsMatchConfirm" placeholder="Confirm password" class="form-control"/>
+                    <input type="password" name="displayIfTextsMatch" placeholder="Enter password" class="form-control"/>
+                    <input type="password" name="displayIfTextsMatchConfirm" placeholder="Confirm password" class="form-control"/>
                     <div
                       class="form-text text-muted display-if"
-                      data-target_identifier="#displayIfTextsMatch"
-                      data-target_matches_identifier="#displayIfTextsMatchConfirm"
+                      data-target_name="displayIfTextsMatch"
+                      data-target_matches_identifier="displayIfTextsMatchConfirm"
                       data-target_value_can_be_null=true
                       data-target_type="password"
                       data-target_value="password">
@@ -101,10 +101,10 @@
                 <div class="row display-if-row">
                   <div class="col-md-8 form-check">
                     <label>Password Tag</label>
-                    <input type="password" id="displayIfPassword" placeholder="Type the word: password" class="form-control"/>
+                    <input type="password" name="displayIfPassword" placeholder="Type the word: password" class="form-control"/>
                     <div
                       class="form-text text-muted display-if"
-                      data-target_identifier="#displayIfPassword"
+                      data-target_name="displayIfPassword"
                       data-target_type="password"
                       data-target_value="password">
                       <small>Wow. That is not a good password!</small>
@@ -115,12 +115,12 @@
                 <div class="row display-if-row">
                   <div class="col-md-8 form-check">
                     <label>Password Fields Match?</label>
-                    <input type="password" id="displayIfPasswordsMatch" placeholder="Enter password" class="form-control"/>
-                    <input type="password" id="displayIfPasswordsMatchConfirm" placeholder="Confirm password" class="form-control"/>
+                    <input type="password" name="displayIfPasswordsMatch" placeholder="Enter password" class="form-control"/>
+                    <input type="password" name="displayIfPasswordsMatchConfirm" placeholder="Confirm password" class="form-control"/>
                     <div
                       class="form-text text-muted display-if"
-                      data-target_identifier="#displayIfPasswordsMatch"
-                      data-target_matches_identifier="#displayIfPasswordsMatchConfirm"
+                      data-target_name="displayIfPasswordsMatch"
+                      data-target_matches_identifier="displayIfPasswordsMatchConfirm"
                       data-target_type="password"
                       data-target_value="password">
                       <small>The passwords match!</small>
@@ -137,20 +137,20 @@
                 <div class="row display-if-row">
                   <div class="col-md-8 form-group">
                     <label for="displayIfSelect">Select tag has specific value</label>
-                    <select id="displayIfSelect" class="form-control">
+                    <select name="displayIfSelect" class="form-control">
                       <option value="Austrailian Shepherd">Austrailian Shepherd</option>
                       <option value="Golden Retriever">Golden Retriever</option>
                     </select>
                     <div
                       class="form-text text-muted display-if"
-                      data-target_identifier="#displayIfSelect"
+                      data-target_name="displayIfSelect"
                       data-target_type="select"
                       data-target_value="Austrailian Shepherd">
                       <small>The selected option is Austrailian Shepherd.</small>
                     </div>
                     <div
                       class="form-text text-muted display-if"
-                      data-target_identifier="#displayIfSelect"
+                      data-target_name="displayIfSelect"
                       data-target_type="select"
                       data-target_value="Golden Retriever">
                       <small>The selected option is Golden Retriever.</small>
@@ -159,14 +159,14 @@
                   <div class="col-md-4">
                     <div
                       class="form-text text-muted display-if"
-                      data-target_identifier="#displayIfSelect"
+                      data-target_name="displayIfSelect"
                       data-target_type="select"
                       data-target_value="Austrailian Shepherd">
                       <img src="images/austrailian_shepherd.jpg" style="max-width: 100%; max-height: 100px" />
                     </div>
                     <div
                       class="form-text text-muted display-if"
-                      data-target_identifier="#displayIfSelect"
+                      data-target_name="displayIfSelect"
                       data-target_type="select"
                       data-target_value="Golden Retriever">
                       <img src="images/golden.jpg" style="max-width: 100%; max-height: 100px" />
@@ -179,14 +179,14 @@
                 <div class="row display-if-row">
                   <div class="col-md-8 form-group">
                     <label for="displayIfSelectAny">Select has any value</label>
-                    <select id="displayIfSelectAny" class="form-control">
+                    <select name="displayIfSelectAny" class="form-control">
                       <option disabled selected value>Select An Option</option>
                       <option value="Austrailian Shepherd">Austrailian Shepherd</option>
                       <option value="Golden Retriever">Golden Retriever</option>
                     </select>
                     <div
                       class="form-text text-muted display-if"
-                      data-target_identifier="#displayIfSelectAny"
+                      data-target_name="displayIfSelectAny"
                       data-target_type="select"
                       data-target_has_any_value=true>
                       <small>An option has been selected.</small>
@@ -202,10 +202,10 @@
                 <div class="row display-if-row">
                   <div class="col-md-8 form-check">
                     <label for="displayIfCheckbox">Do you like checkboxes?</label>
-                    <input type="checkbox" id="displayIfCheckbox" class="form-check-input" />
+                    <input type="checkbox" name="displayIfCheckbox" class="form-check-input" />
                     <div
                       class="form-text text-muted display-if"
-                      data-target_identifier="#displayIfCheckbox"
+                      data-target_name="displayIfCheckbox"
                       data-target_type="checkbox"
                       data-target_value=true>
                       <small>Great, I do too!</small>
@@ -226,28 +226,28 @@
                     <input type="radio" name="displayIfRadio" value="other" /> Other
                     <div
                       class="form-text text-muted display-if"
-                      data-target_identifier="input[name=displayIfRadio]"
+                      data-target_name="displayIfRadio"
                       data-target_type="radio"
                       data-target_value="dogs">
                       <small>I agree, dogs are the best.</small>
                     </div>
                     <div
                       class="form-text text-muted display-if"
-                      data-target_identifier="input[name=displayIfRadio]"
+                      data-target_name="displayIfRadio"
                       data-target_type="radio"
                       data-target_value="cats">
                       <small>Good choice, I do like cats!</small>
                     </div>
                     <div
                       class="form-text text-muted display-if"
-                      data-target_identifier="input[name=displayIfRadio]"
+                      data-target_name="displayIfRadio"
                       data-target_type="radio"
                       data-target_value="other">
                       <small>Oh, okay.</small>
                     </div>
                     <div
                       class="form-text text-muted display-if"
-                      data-target_identifier="input[name=displayIfRadio]"
+                      data-target_name="displayIfRadio"
                       data-target_type="radio"
                       data-target_has_any_value=true>
                       <small>But, thanks for picking :).</small>
@@ -265,14 +265,14 @@
                 <div class="row display-if-row">
                   <div class="col-md-8 form-check">
                     <label>File Tag</label>
-                    <input type="file" id="displayIfFile" class="form-control"/>
+                    <input type="file" name="displayIfFile" class="form-control"/>
                     <div
                       class="form-text text-muted">
                       <small>Don't worry, we wont save it. This is just for demonstration.</small>
                     </div>
                     <div
                       class="form-text text-muted display-if"
-                      data-target_identifier="#displayIfFile"
+                      data-target_name="displayIfFile"
                       data-target_type="file">
                       <small>You have picked a file!</small>
                     </div>
@@ -301,7 +301,7 @@
     <script src="js/bootstrap.min.js"></script>
 
 
-    <script src="../js/display-if.min.js"></script>
+    <script src="../js/display-if.js"></script>
 
 </body>
 
