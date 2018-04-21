@@ -30,6 +30,9 @@
     <div class="container">
         <h2>Display If</h2>
         <form>
+
+          <!-- ************************ SELECT TAG ************************ -->
+
           <div class="row">
             <div class="col-md-8 form-group">
               <label for="displayIfSelect">Select Tag</label>
@@ -69,6 +72,23 @@
               </div>
             </div>
           </div>
+
+          <!-- *********************** CHECKBOX TAG *********************** -->
+
+          <div class="row">
+            <div class="col-md-8 form-check">
+              <label for="displayIfCheckbox">Checkbox Tag</label>
+              <input type="checkbox" id="displayIfCheckbox" class="form-check-input" />
+              <div
+                class="form-text text-muted display-if"
+                data-target_identifier="#displayIfCheckbox"
+                data-target_type="checkbox"
+                data-target_value=true>
+                <small>The checkbox has been selected.</small>
+              </div>
+            </div>
+          </div>
+
         </form>
         <!-- /.row -->
 

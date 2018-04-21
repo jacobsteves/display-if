@@ -16,9 +16,20 @@
         }
       }
 
+      function checkboxValidator(el) {
+        var $target = $(el);
+
+        if (displayIfValueIs) {
+            return $target.is(':checked') === displayIfValueIs;
+        } else {
+            return $target.is(':checked');
+        }
+      }
+
       function showOrHide() {
           var numChecks = $targets.map(function() {
               if (targetType === "select") return selectValidator(this);
+              else if (targetType === "checkbox") return checkboxValidator(this);
           }).toArray().reduce(function(a, b) { return a + b; }, 0);
 
           if ($targets.length > 0 && numChecks == $targets.length) {
