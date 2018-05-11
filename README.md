@@ -17,7 +17,7 @@ A super light & simple jQuery module that displays or hides specified elements b
 If you do not want to clone the file, the file is also hosted on my website. To import the script using this hosting, include this within your project:
 
 ```html
-<script src="http://jacobsteves.ca/jquery-display-if/js/display-if.min.js"></script>
+<script src="http://jacobsteves.ca/software/jquery-display-if/js/display-if.min.js"></script>
 ```
 
 ## Usage
