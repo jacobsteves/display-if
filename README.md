@@ -53,5 +53,5 @@ For example, if your option is named `option` add a `data-option='...'` tag to y
 | target_value_can_be_null   | <b>Default:</b> false. <br><br>If true, then the target_value could match with matches_identifiers if both values are null. If false, then each target and match must have some value so satisfy the display requirement. |
 
 ## Demo
-Click [here](http://jacobsteves.ca/jquery-display-if) for a live demo.
+Click [here](http://jacobsteves.ca/software/jquery-display-if) for a live demo.
 ![Demo Gif](demo/images/displayIf.gif)
