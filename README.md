@@ -5,9 +5,20 @@ A super light & simple jQuery module that displays or hides specified elements b
 - <b>jQuery:</b> version 1.11.1 or higher.
 
 ## Installation
-- Download `js/display-if.js` or `js/display-if.min.js`.
-- Import it into your project and you're good to go
-- To be available on Bower/NPM shortly
+### Cloning the File
+1. Clone this repository or simply download either `js/display-if.js` or `js/display-if.min.js`.
+    - Note: `display-if.min.js` is a minified version of `js/display-if.js`. This means that it is a smaller file. If you want to update the scripts contents, then copy `js/display-if.js`. Otherwise, download the minified version.
+2. Include the file in your project
+```html
+<script src="your/path/to/display-if.min.js"></script>
+```
+
+### Using Alternative Hosting
+If you do not want to clone the file, the file is also hosted on my website. To import the script using this hosting, include this within your project:
+
+```html
+<script src="http://jacobsteves.ca/jquery-display-if/js/display-if.min.js"></script>
+```
 
 ## Usage
 1. Name your input/form field. For example:
