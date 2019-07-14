@@ -13,13 +13,6 @@ A super light & simple jQuery module that displays or hides specified elements b
 <script src="your/path/to/display-if.min.js"></script>
 ```
 
-### Using Alternative Hosting
-If you do not want to clone the file, the file is also hosted on my website. To import the script using this hosting, include this within your project:
-
-```html
-<script src="http://jacobsteves.ca/software/jquery-display-if/js/display-if.min.js"></script>
-```
-
 ## Usage
 1. Name your input/form field. For example:
 ```html
@@ -39,7 +32,7 @@ If you do not want to clone the file, the file is also hosted on my website. To 
 - In this example, when `input[name=displayIfText]` has a value of `debug`, the div above will be visible.
 
 #### Data Options
-To add an option to your display-if element, use the html5 data- tags. 
+To add an option to your display-if element, use the html5 data- tags.
 For example, if your option is named `option` add a `data-option='...'` tag to your element.
 
 | Option             | Description |
