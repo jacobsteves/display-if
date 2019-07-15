@@ -1,0 +1,19 @@
+{
+  "name": "display-if",
+  "version": "1.0.0",
+  "description": "A jQuery module that displays or hides specified elements based on input and data.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacobsteves/display-if.git"
+  },
+  "author": "jacobsteves",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jacobsteves/display-if/issues"
+  },
+  "homepage": "https://github.com/jacobsteves/display-if#readme"
+}
