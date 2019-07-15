@@ -5,6 +5,12 @@ A super light & simple jQuery module that displays or hides specified elements b
 - <b>jQuery:</b> version 1.11.1 or higher.
 
 ## Installation
+### Package Manager
+You can install via npm, yarn, bower, etc.
+```
+npm install display-if
+```
+
 ### Cloning the File
 1. Clone this repository or simply download either `js/display-if.js` or `js/display-if.min.js`.
     - Note: `display-if.min.js` is a minified version of `js/display-if.js`. This means that it is a smaller file. If you want to update the scripts contents, then copy `js/display-if.js`. Otherwise, download the minified version.
