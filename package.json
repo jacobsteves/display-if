@@ -1,6 +1,6 @@
 {
   "name": "display-if",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A jQuery module that displays or hides specified elements based on input and data.",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/jacobsteves/display-if#readme",
   "dependencies": {
-    "jquery": "1.11.1"
+    "jquery": ">=3.4.0"
   }
 }
