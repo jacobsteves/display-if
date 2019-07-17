@@ -65,7 +65,7 @@
         * must update the targets to only the checked value.
         */
       function updateRadioTargets() {
-        $targets = $("[name=" + $this.data('target_name') + "]");
+        $targets = $("[name='" + $this.data('target_name') + "']");
         $targets = $targets.filter(':checked');
       }
 
