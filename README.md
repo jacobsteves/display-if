@@ -44,6 +44,7 @@ For example, if your option is named `option` add a `data-option='...'` tag to y
 | Option             | Description |
 | ------------------ | ----------- |
 | target_name               | The name of the form field that the display element depends on. |
+| target_class              | The class of the form field that the display element depends on. This value is ignored if `target_name` is present. |
 | target_matches_identifier | The name of another form field. If this option is given, then the system will check if `[name=data_target_name]` has the same value as `[name=data_target_matches_identifier]` |
 | target_type        | <b>Default:</b> 'default'. <br><b>Options:</b> 'text', 'select', 'password', 'radio', 'checkbox', 'default' <br><br>The type of input. |
 | display_if_inverse | <b>Default:</b> false. <br><br>If true, the display requirements will show the element if the negation of the display_if is satisfied |

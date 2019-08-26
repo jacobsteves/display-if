@@ -1,7 +1,11 @@
 (function($) {
   $('.display-if').each(function() {
       var $this = $(this);
-      var $targets = $("[name='" + $this.data('target_name') + "']");
+
+      var targetName = $this.data('target_name')
+      var targetClass = $this.data('target_class')
+
+      var $targets = (targetName) ? $("[name='" + targetName + "']") : $("." + targetClass);
       var $matches = $("[name='" + $this.data('target_matches_identifier') + "']");
 
       var inverse = $this.data('display_if_inverse');
